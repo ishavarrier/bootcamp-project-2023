@@ -8,14 +8,16 @@
     --cg-mustard: rgb(181,136,85);
     --cg-skyblue: rgb(158,190,179);
     --cg-cream: rgb(228, 212, 193);
+    --cg-light_cream: rgb(195, 171, 141);
+
 
   }
 
+  
   html {
     height: 100%;
     font-size: 16px;
   }
-
   
   body {
     background: var(--cg-cream);
@@ -25,7 +27,6 @@
     margin: 0;
     font-family: monospace;
     color:rgb(13, 0, 0)
-   
   }
   
   /* CSS for navigation */
@@ -66,7 +67,6 @@
     margin: 0 12px;
     text-decoration: none;
     letter-spacing: 2px;
-  
     font-family: monospace;
   }
   
@@ -79,7 +79,6 @@
     color: var(--cg-blue);
   }
   
-
   
   .logo a:hover {
     text-decoration: None;
@@ -98,8 +97,17 @@
     justify-content: center;
     font-size: 40px;
     font-family: Georgia;
-    padding-top: 50px;
-    background-color: rgb(165, 182, 171);
+    padding-top: 30px;
+  }
+
+  .page-title-resume{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: var(--cg-light_cream);
   }
 
   .introduction {
@@ -362,4 +370,21 @@
 .wow_picture img {
     max-height: 450px; 
     padding: 10px
+}
+
+.homepage_pic img{
+    width: 700px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.resume{
+  background: var(--cg-light_cream);
+  padding: 10px;
+}
+
+.resume-link{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
