@@ -4,14 +4,22 @@ import Link from "next/link";
 import blogs from '@/app/blogData';
 import BlogPreview from './components/blogPreview';
 
+import profilepic from './images/profile_pic.png'
+import basketballpic from './images/basketball.png'
+import beachpic from './images/beach.png'
+import treepic from './images/tree.png'
+import nightpic from './images/night.png'
+
+
+
 export default function Home() {
   return (
   <div>
 
     <main>
       <div className = "container1">
-        <div className = "profile_pic">
-        <img src="bootcamp-milestone-2/src/app/profile_pic.png"/>
+        <div>
+        <img src={profilepic.src} alt="" style={{ width: '250px' }} />
         </div>
         <div className = "intro_text">
           <h1>Hi, I'm Isha!</h1>
@@ -34,16 +42,16 @@ export default function Home() {
 
       <div className = "container3">
         <div className = "wow_picture">
-            <img src="basketball.png" />
+        <img src={basketballpic.src} alt="" style={{ width: '320px' }} />
         </div>
         <div className = "wow_picture">
-            <img src="beach.png" />
+        <img src={beachpic.src} alt="" style={{ width: '320px' }} />
         </div>
         <div className = "wow_picture">
-            <img src="night.png" />
+            <img src={treepic.src} alt="" style={{ width: '320px' }} />
         </div>
         <div className = "wow_picture">
-            <img src="tree.png" />
+            <img src={nightpic.src} alt="" style={{ width: '320px' }} />
         </div>
       </div>
     </main>

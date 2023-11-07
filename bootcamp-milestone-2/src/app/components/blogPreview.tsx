@@ -23,7 +23,7 @@ export default function BlogPreview(props: Blog) {
       <div className={style.div}>
         <h3>{props.title}</h3>
         <div>
-          <Image src={props.image} alt="Blog Image" width={500} height={500} />
+          <Image src={props.image} alt="Blog Image" width={500} />
           <p>{props.description}</p>
           <p>{props.date}</p>
           <p>{props.slugURL}</p>
