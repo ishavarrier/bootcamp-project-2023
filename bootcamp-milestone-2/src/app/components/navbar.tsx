@@ -7,11 +7,24 @@ export default function Navbar() {
       <h1> Isha's Personal Website </h1>
       <nav>
         <ul className={style.navList}>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li> <a href="/portfolio">Portfolio</a></li>
-          <li> <a href="/resume">Resume</a></li>
-          <li> <a href="/contact">Contact</a></li>
+          <li>
+            <a href="../">Home</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            {" "}
+            <a href="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            {" "}
+            <a href="/resume">Resume</a>
+          </li>
+          <li>
+            {" "}
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>

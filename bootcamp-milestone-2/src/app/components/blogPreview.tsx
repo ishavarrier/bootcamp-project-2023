@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 export default function BlogPreview(props: Blog) {
   return (
+  <div className={style.centeredcontainer}> 
     <div>
       <div>
         <main>
-          <h1 className="page-title">Blog</h1>
           <div className="blog_container"> </div>
         </main>
 
@@ -30,5 +30,6 @@ export default function BlogPreview(props: Blog) {
         </div>
       </div>
     </div>
+  </div>
   );
 }

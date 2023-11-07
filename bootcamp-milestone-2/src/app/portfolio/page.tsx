@@ -1,5 +1,9 @@
 //import styles from './page.module.css'
+import Link from 'next/link';
 import '../myhomepage.css';
+import homepagepic from '@/app/images/homepage.png'
+import Image, { StaticImageData } from "next/image";
+
 
 export default function Portfolio() {
   return (
@@ -8,11 +12,7 @@ export default function Portfolio() {
         <h1 className = "page-title">Portfolio</h1>
         <div className = "container1">
 
-            <div className = "homepage_pic">
-                <a href="index.html">
-                    <img src="homepage.png" alt="Filler" />
-                </a>
-            </div>
+        <div className="project"><Link href="../"><Image src={homepagepic.src} alt="Homepage screenshot to show in portfolio." width={800} height={500} ></Image></Link></div>
 
             <div className = "project-details">
                 <p className = "project-name">Isha Varrier's Website</p>
