@@ -11,7 +11,9 @@ import React from "react";
 async function getBlog(slug: string) {
   try {
     console.log("in getBlog " + slug);
-    const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+
+    const apiURL = process.env.NEXT_PUBLIC_API_URL + `/api/blog/${slug}`;
+    const res = await fetch(apiURL, {
       cache: "no-store",
     });
 
