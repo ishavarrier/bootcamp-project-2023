@@ -3,6 +3,7 @@ import style from "./blogPreview.module.css";
 import Image from "next/image";
 import { IBlog } from "@/database/blogSchema";
 import Link from "next/link";
+import { format } from "date-fns";
 
 export default function BlogPreview(props: IBlog) {
   return (
@@ -25,7 +26,7 @@ export default function BlogPreview(props: IBlog) {
             <Link href={`/blogs/${props.slugURL}`}>
               <h2>{props.title}</h2>
             </Link>
-            <h5>Published on, {JSON.stringify(props.date)}</h5>
+            <h5>Published on, {format(new Date(props.date), 'LLLL d, yyyy')}</h5>
             <p>{props.shortdescription}</p>
           </div>
         </div>

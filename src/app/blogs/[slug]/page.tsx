@@ -5,6 +5,7 @@ import { text } from "stream/consumers";
 import CommentForm from "@/app/components/commentForm";
 import ReactDOM from "react-dom";
 import React from "react";
+import { format } from "date-fns";
 
 //import Blog from '../../../database/blogSchema'
 
@@ -12,8 +13,12 @@ async function getBlog(slug: string) {
   try {
     console.log("in getBlog " + slug);
 
-    const apiURL = process.env.NEXT_PUBLIC_API_URL + `/api/blog/${slug}`;
-    const res = await fetch(apiURL, {
+    const hostname = process.env.VERCEL_URL || 'localhost:3000'; // Default to localhost for local development
+    const protocol = process.env.VERCEL_ENV === 'production' ? 'https' : 'http';
+    const apiUrl = `${protocol}://${hostname}/api/blog/${slug}`;
+    console.log('-------Got the URL --------------' + apiUrl);
+
+    const res = await fetch(apiUrl, {
       cache: "no-store",
     });
 
@@ -43,7 +48,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           <div style={{ textAlign: "center" }}>
             <h1>{blog.title}</h1>
             <p>{blog.description}</p>
-            <p>Published Date: {JSON.stringify(blog.date)}</p>
+            <p>Published Date: {format(new Date(blog.date), 'LLLL d, yyyy')}</p>
             <img src={blog.image} alt="Blog Image" style={{ width: "40%" }} />
           </div>
         </div>
@@ -86,7 +91,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
                         fontSize: "small",
                       }}
                     >
-                      {JSON.stringify(comment.time)}
+                      {format(new Date(comment.time), 'LLLL d, yyyy')}
                     </span>
                     <p>{comment.comment}</p>
                   </div>
