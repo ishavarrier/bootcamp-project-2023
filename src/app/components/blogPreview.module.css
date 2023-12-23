@@ -1,0 +1,22 @@
+.centeredcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  
+  text-align: center;
+  font-family: Georgia;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
