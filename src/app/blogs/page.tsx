@@ -6,17 +6,9 @@ import '@/app/myhomepage.css';
 
 
 
-export default function Portfolio() {
-
-    // const mainStyle = {
-    //   paddingTop: '20px'
-    // };
-
-    // const linkStyle1 = {
-    //   backgroundColor: '#9c432d'
-    // }
-    const firstBlog = blogs[0]
-    console.log("this is the first blog" + firstBlog)
+export default async function BlogMain() 
+{
+  console.log("props for Blog Preview" + blogs)
 
 return (
 <div>
@@ -27,14 +19,15 @@ return (
 
       <div>
         
-        {blogs.map(blog => 
-      <BlogPreview  {...blog} /> // This is how we call the component
-		)}
+        {blogs.map((blog) => (
+          <BlogPreview {...blog}          /> // This is how we call the component
+		))}
         </div>
     </main>
     <div className = "footer">
       <footer>© 2023 Personal Website Isha Varrier | All Rights Reserved</footer>
    </div>
 </div>
+
   )
 }
