@@ -7,34 +7,29 @@ import '@/app/myhomepage.css';
 
 
 export default function Portfolio() {
-  
 
-    const mainStyle = {
-      paddingTop: '20px'
-    };
+    // const mainStyle = {
+    //   paddingTop: '20px'
+    // };
 
-    const linkStyle1 = {
-      backgroundColor: '#9c432d'
-    }
-
+    // const linkStyle1 = {
+    //   backgroundColor: '#9c432d'
+    // }
+    const firstBlog = blogs[0]
+    console.log("this is the first blog" + firstBlog)
 
 return (
 <div>
-    <main style = {mainStyle}>
+    <main>
       <div >
         <h1 className = "page-title">My Blogs: Click  to View</h1>
       </div>
 
-        <div >
-        {blogs.map((blog: { title: string; date: Date; shortdescription: string; description: string; slugURL: string; image: string; }) =>(
-        <BlogPreview 
-            title={blog.title}
-            date={blog.date}
-            shortdescription = {blog.shortdescription}
-            description={blog.description}
-            slugURL={blog.slugURL}
-            image={blog.image} comments={[]}  />
-        ))}
+      <div>
+        
+        {blogs.map(blog => 
+      <BlogPreview  {...blog} /> // This is how we call the component
+		)}
         </div>
     </main>
     <div className = "footer">
