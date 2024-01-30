@@ -1,5 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Click [here] (https://bootcamp-project-2023-self.vercel.app/) to see my website: 
-
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Please visit my website: https://bootcamp-project-2023-self.vercel.app/
 ## Getting Started
 
 First, run the development server:
