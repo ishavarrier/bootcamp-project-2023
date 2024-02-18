@@ -25,7 +25,8 @@ export default function Home() {
         </div>
         <div className = "intro_text">
           <h1>Hi, I'm Isha!</h1>
-          <p> Welcome to my website made for Hack4Impact! </p>
+          <p> Welcome to my website made for Hack4Impact! This website was created with TypeScript, Next.js, MongoDB, HTML, CSS, and REST
+          APIs. </p>
         </div>
       </div>
 
